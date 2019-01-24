@@ -1,35 +1,25 @@
 # Задания для курса по TypeScript
 
-## День 1
+## Подготовка окружения
 
-    - Установить NPM - https://www.npmjs.com/get-npm
+    - Установить NPM
+      - Windows: Переходим по ссылке https://www.npmjs.com/get-npm
+      - В терминале: sudo apt install nodejs
     - Установить VS Code - https://code.visualstudio.com/download
     - Зарегистрироваться на GitHub - https://github.com/
     - Установить Git - https://git-scm.com/
-    - Fork репозитория с примером - https://github.com/Bobreshovr/TypeScriptCourse док - https://help.github.com/articles/fork-a-repo/
-    - Клон репозитория локально
-    - Делаем задачу, которая спрашивает имя, а потом выводит «Hello, <имя>». Для этого в /Day/app.ts подготовлен шаблон
-    - Коммит результата
-    - Пуш результата
-    - ДЗ: Программа решающая квадратные уравнения
-
-### FAQ
-
-### Как считать то, что ввел пользователь в консоль?
-
-Используйте функцию вида
-
-```javascript
-const str = await read()
-```
-
-### Как запустить написанный код?
-
-В терминале ввести команды
-
+      - Linux: sudo apt install git
+      - Windows: https://git-scm.com/
+      - Для все, выполнить в терминале команды
 ```bash
-cd Day1
-npm install
-
-npm run execute
+        git config --global user.name "<Имя на github>"
+        git config --global user.email "<Email на gitHub>"
 ```
+    - Fork репозитория с примером - https://github.com/Bobreshovr/TypeScriptCourse, что такое Fork и как это работает можно прочесть здесь - https://help.github.com/articles/fork-a-repo/
+    - Клон вашего репозитория локально
+      - git clone <адрес репозитория на gitHub>
+
+- Практика [День 1](day1.md)
+- Практика [День 2](day2.md)
+
+**Для синхронизации вашего форка репозитория** используйте  [данный гайд](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)
