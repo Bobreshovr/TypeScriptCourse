@@ -1,4 +1,5 @@
 import { read } from "./console";
+import * as math from 'mathjs';
 
 async function main(): Promise<void>
 {
@@ -18,32 +19,51 @@ async function main(): Promise<void>
     console.log('Дискриминант равен',discr);
 
     
-    if (coeff_a === coeff_b)
+    if (coeff_a === 0)
     {
-        if (coeff_c != 0)
+        if (coeff_b === 0)
         {
-            console.log('Уравнение решений не имеет');
+            if (coeff_c ===0)
+            {
+                console.log('Уравнение имеет бесчисленное множество решений');
+            }
+
+            else
+            {
+                console.log('Уравнение решений не имеет');
+            }
         }
-        else if (coeff_c === 0)
+        
+        else if (coeff_c !=0)
         {
-            console.log('Уравнение имеет бесчисленное множество решений');
-        }
-    } 
-   
+            console.log('Уравнение сводится к линейному');
+        }   
+    }
+
 
     else if (discr >0) 
     {
         console.log('Уравнение имеет два корня');
+        var x1=((-1*coeff_b + Math.sqrt(discr))/(2*coeff_a));
+        console.log('x1=',x1);
+        var x2=((-1*coeff_b - Math.sqrt(discr))/(2*coeff_a));
+        console.log('x2=',x2);
     }
 
     else if (discr === 0)
     {
         console.log('Уравнение имеет один корень');
+        var x=((-1*coeff_b + Math.sqrt(discr))/(2*coeff_a));
+        console.log('x=',x);
     }
 
     else
     {
         console.log('Уравнение имеет комплексные корни');
+        const x1i=((-1*coeff_b + math.sqrt(discr))/(2*coeff_a));
+        console.log('x1=',x1i);
+        const x2i=((-1*coeff_b - math.sqrt(discr))/(2*coeff_a));
+        console.log('x2=',x2i);
     }
 
 
