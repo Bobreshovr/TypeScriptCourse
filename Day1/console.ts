@@ -1,4 +1,4 @@
-export function read() :Promise<string>
+export function read() : Promise<string>
 {
     var readline = require('readline');
     var rl = readline.createInterface({
@@ -8,12 +8,9 @@ export function read() :Promise<string>
     });
 
     return new Promise(function(resolve, reject) {
-
         rl.on('line', function(line){
             resolve(line);
             rl.close();
         });
-        
-
       });
 }
