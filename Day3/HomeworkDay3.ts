@@ -1,4 +1,5 @@
 import { read } from "./console";
+import { get } from "https";
 
 let arrayGenerator = function():number[]{
     var newArray:number[]=[];
@@ -23,16 +24,32 @@ let arraySum = function (newArray:number[]):number{
 
 async function main(): Promise<void>
 {
-    //ar genArr=
+    var arrayCounter:number[]=[];
+    var sumCompare:number[]=[];
+    function getMaxOfArray(numArray):number {
+        return Math.max.apply(null, numArray);
+    }
+
 
     for (var i=1; i<=10; i++){
-       var massive =arrayGenerator(); 
+       var arr =arrayGenerator(); 
        console.log('Массив #',i); 
-       console.log(massive);
+       console.log(arr);
        console.log('Сумма элементов массива');
-       console.log(arraySum(massive));
-       
+       console.log(arraySum(arr));
+       arrayCounter.push(i); 
+       sumCompare.push(arraySum(arr))      
     }
+    
+    console.log('***')
+    console.log(arrayCounter);
+    console.log(sumCompare);
+
+    console.log(getMaxOfArray(sumCompare));
+
+
+
+    console.log()
         
 }
 
