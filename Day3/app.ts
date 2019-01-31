@@ -3,20 +3,18 @@ import { read } from "./console";
 async function main(): Promise<void>
 {
     console.log('Введите строку для инверсии');
-    const defaultString= await read();
+    const startingString= await read();
 
-    var splittedString= defaultString.split(" ");
-    console.log(splittedString);
+    var splittedString= startingString.split(" ");
+    //console.log(splittedString);
+
+    var invertedString=''
     
-    for ( var i=0;i < splittedString.length ; i++){
-
+    for ( var i=splittedString.length-1; i>=0  ; i--){
+         invertedString = invertedString + splittedString[i] + ' ';
     }
     
-    // Вычисляем размерность массива splittedString
-    // Запускаем цикл длиной в размерность массива
-    // Последний член массива становится превым
-    // Далее конкатенируем до размерности массива -1
-    // Выводим 
+    console.log(invertedString); 
 }
 
 main();
