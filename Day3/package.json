@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "execute": "ts-node app.ts"
+    "execute": "ts-node app.ts",
+    "execute2": "ts-node HomeworkDay3.ts"
   },
   "author": "",
   "license": "ISC",
