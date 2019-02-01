@@ -24,32 +24,36 @@ let arraySum = function (newArray:number[]):number{
 
 async function main(): Promise<void>
 {
-    var arrayCounter:number[]=[];
-    var sumCompare:number[]=[];
+    var arrayOfArrays: Array<number[]> = [];
+    var arrayTotal: number[] = [];
     function getMaxOfArray(numArray):number {
         return Math.max.apply(null, numArray);
     }
 
-
     for (var i=1; i<=10; i++){
-       var arr =arrayGenerator(); 
-       console.log('Массив #',i); 
-       console.log(arr);
-       console.log('Сумма элементов массива');
-       console.log(arraySum(arr));
-       arrayCounter.push(i); 
-       sumCompare.push(arraySum(arr))      
+        var arr=arrayGenerator();
+        arrayOfArrays.push(arr);
+        arrayTotal.push(arraySum(arr));
+        console.log('Массив #',i); 
+        console.log(arr);
+        console.log('Сумма элементов массива');
+        console.log(arraySum(arr));
+        console.log(' ')       
     }
     
-    console.log('***')
-    console.log(arrayCounter);
-    console.log(sumCompare);
+    var maxSum=getMaxOfArray(arrayTotal);
+    var MaxIndex= arrayTotal.indexOf(Math.max(...arrayTotal));
 
-    console.log(getMaxOfArray(sumCompare));
+    console.log('Номер массива с маскимальной суммой');
+    console.log(MaxIndex+1);
+    
+    
+    console.log('Массив с максимальной суммой элементов')
+    console.log(arrayOfArrays[MaxIndex]);
 
-
-
-    console.log()
+    console.log('Сумма элементов массива');
+    console.log(maxSum);
+    
         
 }
 
