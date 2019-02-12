@@ -2,9 +2,10 @@
   "name": "day1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "homeWork.ts",
   "scripts": {
-    "execute": "ts-node app.ts"
+    "execute": "ts-node app.ts",
+    "execute2": "ts-node homeWork.ts"
   },
   "author": "",
   "license": "ISC",

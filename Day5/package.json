@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "execute": "tsc --out app.js *.ts"
+    "execute": "tsc --out app.js app.ts"
   },
   "author": "",
   "license": "ISC",
